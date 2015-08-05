@@ -88,24 +88,11 @@ class format_numeric extends format_base {
             $sectionno = $section;
         }
         if ($sectionno !== null) {
-            if ($sr !== null) {
-                if ($sr) {
-                    $usercoursedisplay = COURSE_DISPLAY_MULTIPAGE;
-                    $sectionno = $sr;
-                } else {
-                    $usercoursedisplay = COURSE_DISPLAY_SINGLEPAGE;
-                }
-            } else {
-                $usercoursedisplay = $course->coursedisplay;
-            }
-            if ($sectionno != 0 && $usercoursedisplay == COURSE_DISPLAY_MULTIPAGE) {
-                $url->param('section', $sectionno);
-            } else {
-                if (!empty($options['navigation'])) {
-                    return null;
-                }
-                $url->set_anchor('section-'.$sectionno);
-            }
+
+        if (!empty($options['navigation'])) {
+            return null;
+        }
+        $url->set_anchor('section-'.$sectionno);
         }
         return $url;
     }
@@ -323,6 +310,7 @@ class format_numeric extends format_base {
                 }
             }
         }
+        $data['coursedisplay'] = 0;
         return $this->update_format_options($data);
     }
 }

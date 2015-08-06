@@ -17,10 +17,10 @@
 /**
  * This file contains main class for the course format Topic
  *
- * @package    format
- * @subpackage numeric
- * @copyright  2015 Eduardo Kraus (http://eduardokraus.com)
- * @license    http://eduardokraus.com
+ * @since     Moodle 2.0
+ * @package   format_numeric
+ * @copyright 2009 Sam Hemelryk
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();

@@ -19,8 +19,8 @@
  *
  * @package    format
  * @subpackage numeric
- * @copyright  2015 Eduardo Kraus (http://eduardokraus.com)
- * @license    http://eduardokraus.com
+ * @author N.D.Freear@open.ac.uk, and others.
+ * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();

@@ -17,10 +17,10 @@
 /**
  * Renderer for outputting the numeric course format.
  *
- * @package    format
- * @subpackage numeric
- * @copyright  2015 Eduardo Kraus (http://eduardokraus.com)
- * @license    http://eduardokraus.com
+ * @package format_numeric
+ * @copyright 2012 Dan Poltawski
+ * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @since Moodle 2.3
  */
 
 

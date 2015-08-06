@@ -18,10 +18,9 @@
 /**
  * Strings for component 'format_numeric', language 'en', branch 'MOODLE_20_STABLE'
  *
- * @package    format
- * @subpackage numeric
- * @copyright  2015 Eduardo Kraus (http://eduardokraus.com)
- * @license    http://eduardokraus.com
+ * @package   format_numeric
+ * @copyright 1999 onwards Martin Dougiamas  {@link http://moodle.com}
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $string['currentsection'] = 'This topic';

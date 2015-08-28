@@ -61,8 +61,9 @@
             width  : 125px;
         }
 
-        > li .left.side > img,
-        > li .left.side > span{
+        > li         .left.side > img,
+        > li.current .left.side > span.accesshide
+        {
             width         : 22px;
             height        : 22px;
             font-size     : 0;
@@ -77,7 +78,7 @@
             margin        : 0 0 0 -27px;
             background    : #757575;
         }
-        > li .left.side > span{
+        > li.current .left.side > span.accesshide{
             display: block;
             left: 51px;
         }

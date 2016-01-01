@@ -185,15 +185,15 @@ class format_numeric extends format_base {
                 'numsections' => array(
                     'default' => $courseconfig->numsections,
                     'type' => PARAM_INT,
-                )/*,
-                'hiddensections' => array(
-                    'default' => $courseconfig->hiddensections,
-                    'type' => PARAM_INT,
                 ),
-                'coursedisplay' => array(
-                    'default' => $courseconfig->coursedisplay,
-                    'type' => PARAM_INT,
-                ),*/
+                'hiddensections' => array(
+                    'default'    => 0,
+                    'type'       => PARAM_INT,
+                ),
+                'coursedisplay'  => array(
+                    'default'    => 0,
+                    'type'       => PARAM_INT,
+                )
             );
         }
         if ($foreditform && !isset($courseformatoptions['coursedisplay']['label'])) {
@@ -207,36 +207,21 @@ class format_numeric extends format_base {
                 $sectionmenu[$i] = "$i";
             }
             $courseformatoptionsedit = array(
-                'numsections' => array(
-                    'label' => new lang_string('numberweeks'),
-                    'element_type' => 'select',
+                'numsections'       => array(
+                    'label'              => new lang_string('numberweeks'),
+                    'element_type'       => 'select',
                     'element_attributes' => array($sectionmenu),
-                )/*,
-                'hiddensections' => array(
-                    'label' => new lang_string('hiddensections'),
-                    'help' => 'hiddensections',
-                    'help_component' => 'moodle',
-                    'element_type' => 'select',
-                    'element_attributes' => array(
-                        array(
-                            0 => new lang_string('hiddensectionscollapsed'),
-                            1 => new lang_string('hiddensectionsinvisible')
-                        )
-                    ),
                 ),
-                'coursedisplay' => array(
-                    'label' => new lang_string('coursedisplay'),
-                    'element_type' => 'select',
-                    'element_attributes' => array(
-                        array(
-                            COURSE_DISPLAY_SINGLEPAGE => new lang_string('coursedisplay_single'),
-                            COURSE_DISPLAY_MULTIPAGE => new lang_string('coursedisplay_multi')
-                        )
-                    ),
-                    'help' => 'coursedisplay',
-                    'help_component' => 'moodle',
-                )*/
+                'coursedisplay'      => array(
+                    'label'              => new lang_string('hiddensections'),
+                    'element_type'       => 'hidden'
+                ),
+                'hiddensections'     => array(
+                    'label'              => new lang_string('coursedisplay'),
+                    'element_type'       => 'hidden'
+                )
             );
+
             $courseformatoptions = array_merge_recursive($courseformatoptions, $courseformatoptionsedit);
         }
         return $courseformatoptions;
